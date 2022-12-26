@@ -12,9 +12,35 @@
 </body>
 <script>
     let str = prompt("Nhập vào 1 chuỗi");
-    let substring = str.split("");
-    if(substring[i] !== ""){
-
+    function editStr() {
+        let substring = str.split(' ');
+        for (let i =0;i < substring.length ;) {
+            if(substring[i] === "" ){
+                substring.splice(i,1);
+            }else{
+                i += 1;
+            }
+        }
+        console.log(substring);
+        for (let i = 0;i<substring.length;i++){
+            substring[i] = substring[i].charAt(0).toUpperCase() + substring[i].slice(1);
+        }
+        console.log(substring);
     }
+    editStr();
+    function mainStr() {
+        let main = str.split(' ');
+        let max = main[0];
+        for(let i = 0;i < main.length;i++){
+            max = main[i];
+            if(max <= main[i].length){
+                max = main[i].length;
+            }
+        }
+        console.log(max);
+    }
+    mainStr();
+
+
 </script>
 </html>
