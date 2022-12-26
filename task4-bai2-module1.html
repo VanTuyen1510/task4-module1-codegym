@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function differentSymbolsNaive(s) {
+        let count = 0;
+        for (let i = 0; i < s.length ; i++) {
+           if(s[0] !== s[i] && s[0] !== " "){
+               count ++
+           }
+        }
+        console.log(s);
+        return count;
+    }
+    let str = prompt("Nhập vào 1 chuỗi");
+    document.write("Tổng các ký tự khác nhau là  :" + differentSymbolsNaive(str));
+
+
+
+</script>
+</html>
